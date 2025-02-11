@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    container_name: myflask
+    ports:
+      - "8080:80"    # Maps localhost:8080 -> container port 80
+    environment:
+      DB_HOST: "database-1.c38m6e8g2070.eu-north-1.rds.amazonaws.com"
+      DB_NAME: "test"
+      DB_USER: "postgres"
+      DB_PASS: "xynzyc-cyhdi3-xIpcyv"
+      DB_PORT: "5432"
